@@ -1,0 +1,846 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vertisell | CRM com IA que atende, qualifica e vende no WhatsApp</title>
+  <meta name="description" content="A Vertisell junta IA e CRM numa plataforma só: a IA atende no WhatsApp, qualifica, agenda reuniões, envia lembretes, faz follow-up e move o card no funil. Ligações de WhatsApp gravadas, omnichannel e app com a sua marca.">
+  <meta name="theme-color" content="#f7f9fc">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vertisell | CRM com IA que atende, qualifica e vende no WhatsApp">
+  <meta property="og:description" content="IA + CRM em uma só plataforma. A IA atende, qualifica, agenda, lembra, faz follow-up e move o card. Você entra para fechar.">
+  <meta property="og:image" content="assets/img/og-vertisell.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/demo.css">
+  <link rel="stylesheet" href="assets/css/roi.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Vertisell",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, iOS, Android",
+    "description": "CRM com IA que atende, qualifica, agenda reuniões, envia lembretes, faz follow-up e vende pelo WhatsApp.",
+    "publisher": { "@type": "Organization", "name": "Control Gestão" },
+    "offers": [
+      { "@type": "Offer", "name": "Verti Start", "price": "197.00", "priceCurrency": "BRL" },
+      { "@type": "Offer", "name": "Verti Sales", "price": "397.00", "priceCurrency": "BRL" },
+      { "@type": "Offer", "name": "Verti Pro", "price": "597.00", "priceCurrency": "BRL" },
+      { "@type": "Offer", "name": "Verti Enterprise", "price": "997.00", "priceCurrency": "BRL" }
+    ]
+  }
+  </script>
+</head>
+<body>
+<!-- ícones (estilo lucide, traço 2) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-checks" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 7 17l-5-5"/><path d="m22 10-7.5 7.5L13 16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0l1.58 6.14a2 2 0 0 0 1.44 1.44l6.14 1.58a.5.5 0 0 1 0 .96l-6.14 1.58a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0z"/><path d="M20 3v4M22 5h-4"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-sms" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-messenger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c-5.3 0-9.5 3.9-9.5 9 0 2.8 1.3 5.3 3.4 7v3.1l3.1-1.7c.9.3 1.9.4 3 .4 5.3 0 9.5-3.9 9.5-8.9s-4.2-8.9-9.5-8.9Z"/><path d="m7 13.6 3.2-3.4 2.4 2 3.4-3.6"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.29A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.8 11.8 0 0 0-3.48-8.41"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1.2"/><rect x="14" y="4" width="4" height="16" rx="1.2"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5M12 15V3"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
+    <symbol id="i-user-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></symbol>
+    <symbol id="i-kanban" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M8 7v7M12 7v4M16 7v9"/></symbol>
+    <symbol id="i-money" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+    <symbol id="i-phone-app" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2.5"/><path d="M12 18h.01"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.92a1 1 0 0 0-.02-1.84L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0z"/><path d="M22 10v6M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+    <symbol id="i-sign" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22h6a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v10"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10.4 12.6a2 2 0 1 1 3 3L8 21l-4 1 1-4Z"/></symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="7" x="3" y="3" rx="1"/><rect width="9" height="7" x="3" y="14" rx="1"/><rect width="5" height="7" x="16" y="14" rx="1"/></symbol>
+    <symbol id="i-form" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2M12 11h4M12 16h4M8 11h.01M8 16h.01"/></symbol>
+    <symbol id="i-megaphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98M15.41 6.51l-6.82 3.98"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.53L12 17.5l-5.87 3.07 1.12-6.53L2.5 9.41l6.56-.95z"/></symbol>
+    <symbol id="i-star-line" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.53L12 17.5l-5.87 3.07 1.12-6.53L2.5 9.41l6.56-.95z"/></symbol>
+    <symbol id="i-bot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></symbol>
+    <symbol id="i-inbox" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></symbol>
+    <symbol id="i-headphones" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></symbol>
+    <symbol id="i-filter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 3H2l8 9.46V19l4 2v-8.54z"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+    <symbol id="i-arrow-ur" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10M7 17 17 7"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#conteudo">pular para o conteúdo</a>
+
+<!-- ================================================================ topo -->
+<div class="topbar">
+  <a class="announce" href="#ligacoes">
+    <span class="announce__tag">novo</span>
+    <span class="announce__text">ligações de WhatsApp gravadas direto na conversa do CRM</span>
+    <span class="announce__cta">ver como funciona</span>
+  </a>
+  <header class="nav" data-nav>
+    <div class="container nav__inner">
+      <a class="brand" href="#topo" aria-label="Vertisell, voltar ao início">
+        <img src="assets/img/vertisell-shield.webp" width="30" height="29" alt="">
+        <span class="brand__name">vertisell</span>
+      </a>
+      <nav class="nav__links" aria-label="Seções">
+        <a href="#como-funciona">como funciona</a>
+        <a href="#demo">demonstração</a>
+        <a href="#roi">calculadora de roi</a>
+        <a href="#planos">planos</a>
+        <a href="#avaliacoes">avaliações</a>
+      </nav>
+      <a class="btn btn--sm btn--dark nav__cta" href="#contato" data-wa="Olá! Quero falar com um especialista da Vertisell.">falar com especialista</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menu" data-menu-toggle>
+        <svg width="22" height="22"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+    <div class="nav__mobile" id="menu-mobile" hidden data-menu>
+      <a href="#como-funciona">como funciona</a>
+      <a href="#demo">demonstração</a>
+      <a href="#roi">calculadora de roi</a>
+      <a href="#planos">planos</a>
+      <a href="#avaliacoes">avaliações</a>
+      <a class="btn btn--primary" href="#contato" data-wa="Olá! Quero falar com um especialista da Vertisell.">falar com especialista</a>
+    </div>
+  </header>
+</div>
+
+<main id="conteudo">
+
+<!-- ================================================================ hero -->
+<section class="hero dots" id="topo">
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <h1 class="h1 hero__title">
+        <span class="sr-only">Vertisell: CRM com IA que atende, qualifica, agenda e vende pelo WhatsApp.</span>
+        <span class="rotator" aria-hidden="true" data-rotator>
+          <span class="rotator__pain"><span class="rotator__pain-text" data-pain>lead sem resposta?</span></span>
+          <span class="rotator__fix mono"><span data-fix>a ia responde em 8s.</span><span class="caret"></span></span>
+        </span>
+      </h1>
+      <p class="lead hero__sub">A Vertisell junta IA e CRM numa plataforma só. A IA atende no WhatsApp, qualifica, agenda a reunião, manda os lembretes e move o card no funil. Seu time entra para fechar.</p>
+      <div class="hero__ctas">
+        <a class="btn btn--primary btn--lg" href="#contato" data-wa="Olá! Quero agendar uma demonstração da Vertisell.">agendar demonstração</a>
+        <a class="btn btn--ghost btn--lg" href="#roi">calcular meu roi</a>
+      </div>
+      <a class="hero__trust" href="#selos">
+        <span class="hero__trust-badges" aria-hidden="true">
+          <img src="assets/img/badges/g2-top50-sales-2026.webp" width="26" height="30" alt="">
+          <img src="assets/img/badges/g2-top50-agentic-ai-2026.webp" width="26" height="30" alt="">
+          <img src="assets/img/badges/capterra-shortlist-2025.webp" width="36" height="30" alt="">
+        </span>
+        <span>tecnologia premiada pela G2 e pela Capterra</span>
+      </a>
+    </div>
+
+    <div class="hero__visual" aria-hidden="true">
+      <div class="hero__glow"></div>
+      <div class="phone phone--hero">
+        <div class="phone__frame">
+          <div class="phone__island"></div>
+          <div class="phone__screen">
+            <div class="app" data-hero-app>
+              <div class="app__status"><span class="mono">22:14</span><span class="app__status-icons"><i></i><i></i><i></i></span></div>
+              <div class="app__bar">
+                <svg class="app__back" width="18" height="18"><use href="#i-back"/></svg>
+                <span class="avatar" style="--c:#7c3aed">MT</span>
+                <span class="app__who"><strong>Marina Teles</strong><small><svg width="11" height="11"><use href="#i-whatsapp"/></svg> via WhatsApp</small></span>
+                <span class="app__call"><svg width="16" height="16"><use href="#i-phone"/></svg></span>
+              </div>
+              <div class="app__thread" data-hero-thread></div>
+              <div class="app__composer">
+                <span class="app__ai-toggle"><svg width="13" height="13"><use href="#i-sparkle"/></svg> agente de IA ativo</span>
+                <span class="app__input">Digite uma mensagem</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__toasts" data-hero-toasts>
+        <div class="toast hero-toast hero-toast--a" data-toast="lead">
+          <span class="toast__icon"><svg><use href="#i-instagram"/></svg></span>
+          <span><span class="toast__title">novo lead às 22:14</span><span class="toast__meta">anúncio do instagram · agora</span></span>
+        </div>
+        <div class="toast hero-toast hero-toast--b" data-toast="reply">
+          <span class="toast__icon"><svg><use href="#i-clock"/></svg></span>
+          <span><span class="toast__title">respondido em 8 segundos</span><span class="toast__meta">agente de ia · agora</span></span>
+        </div>
+        <div class="toast hero-toast hero-toast--c" data-toast="qualified">
+          <span class="toast__icon toast__icon--purple"><svg><use href="#i-user-check"/></svg></span>
+          <span><span class="toast__title">lead qualificado</span><span class="toast__meta">clareamento a laser · agora</span></span>
+        </div>
+        <div class="toast hero-toast hero-toast--d" data-toast="booked">
+          <span class="toast__icon toast__icon--green"><svg><use href="#i-calendar"/></svg></span>
+          <span><span class="toast__title">avaliação agendada</span><span class="toast__meta">amanhã, 18:00 · agora</span></span>
+        </div>
+        <div class="toast hero-toast hero-toast--f" data-toast="moved">
+          <span class="toast__icon"><svg><use href="#i-kanban"/></svg></span>
+          <span><span class="toast__title">card movido para agendado</span><span class="toast__meta">funil de vendas · agora</span></span>
+        </div>
+        <div class="toast hero-toast hero-toast--e" data-toast="sale">
+          <span class="toast__icon toast__icon--green"><svg><use href="#i-money"/></svg></span>
+          <span><span class="toast__title">venda ganha · R$ 1.890</span><span class="toast__meta">tratamento fechado · agora</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ selos -->
+<section class="badges" id="selos" aria-labelledby="selos-titulo">
+  <div class="container badges__inner">
+    <div class="badges__head">
+      <h2 class="badges__title" id="selos-titulo">tecnologia reconhecida<br><span class="mono">internacionalmente</span></h2>
+      <p class="badges__note">Selos concedidos pela G2 e pela Capterra à tecnologia que roda a Vertisell.</p>
+    </div>
+    <ul class="badges__list">
+      <li><img src="assets/img/badges/g2-top100-software-2026.webp" width="96" height="110" loading="lazy" alt="G2 Best Software 2026: Top 100 Best Software Products"></li>
+      <li><img src="assets/img/badges/g2-top50-sales-2026.webp" width="96" height="110" loading="lazy" alt="G2 Best Software 2026: Top 50 Sales Products"></li>
+      <li><img src="assets/img/badges/g2-top50-agentic-ai-2026.webp" width="96" height="110" loading="lazy" alt="G2 Best Software 2026: Top 50 Agentic AI Products"></li>
+      <li><img src="assets/img/badges/g2-top50-marketing-2026.webp" width="96" height="110" loading="lazy" alt="G2 Best Software 2026: Top 50 Marketing + Digital Advertising Products"></li>
+      <li><img src="assets/img/badges/g2-top50-content-management-2026.webp" width="96" height="110" loading="lazy" alt="G2 Best Software 2026: Top 50 Content Management Products"></li>
+      <li><img src="assets/img/badges/g2-users-most-likely-to-recommend-2026.webp" width="96" height="110" loading="lazy" alt="G2 Winter 2026: Users Most Likely To Recommend, Mid-Market"></li>
+      <li><img src="assets/img/badges/g2-easiest-to-do-business-with-2026.webp" width="96" height="110" loading="lazy" alt="G2 Winter 2026: Easiest To Do Business With, Mid-Market"></li>
+      <li><img src="assets/img/badges/g2-easiest-admin-2026.webp" width="96" height="110" loading="lazy" alt="G2 Winter 2026: Easiest Admin, Mid-Market"></li>
+      <li><img src="assets/img/badges/capterra-shortlist-2025.webp" width="133" height="110" loading="lazy" alt="Capterra Shortlist 2025"></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================================================================ dor -->
+<section class="section pain" id="dor" aria-labelledby="dor-titulo">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="h2" id="dor-titulo">enquanto ninguém responde,<br><span class="mono">o lead esfria.</span></h2>
+      <p class="lead">Numa auditoria de 2.241 empresas nos EUA, publicada na Harvard Business Review, só 37% responderam o lead em até uma hora. Na mesma pesquisa, quem fez contato na primeira hora teve quase 7 vezes mais chance de qualificar o lead.</p>
+    </div>
+
+    <div class="race" data-race>
+      <div class="race__clock" aria-hidden="true">
+        <span class="label">o mesmo lead, duas empresas</span>
+        <span class="race__time mono" data-race-clock>21:47</span>
+      </div>
+
+      <div class="race__col race__col--bad">
+        <div class="race__head">
+          <h3 class="h3">sem ia</h3>
+          <span class="tag tag--red">atendimento manual</span>
+        </div>
+        <ol class="race__list">
+          <li class="race__item" data-at="0"><time class="mono">21:47</time><p>O lead pergunta o preço no WhatsApp.</p></li>
+          <li class="race__item is-bad" data-at="1"><time class="mono">21:47 → 09:30</time><p>Ninguém responde. A equipe só volta amanhã.</p></li>
+          <li class="race__item is-bad" data-at="2"><time class="mono">09:30</time><p>O vendedor responde. O lead já fechou com outra empresa.</p></li>
+          <li class="race__item is-bad" data-at="3"><time class="mono">+3 dias</time><p>Sem follow-up, a conversa morre.</p></li>
+          <li class="race__item is-bad" data-at="4"><time class="mono">no crm</time><p>Nada registrado. Ninguém sabe que esse lead existiu.</p></li>
+        </ol>
+        <div class="race__result race__result--bad" data-at="5"><svg width="18" height="18"><use href="#i-x"/></svg> venda perdida</div>
+      </div>
+
+      <div class="race__col race__col--good">
+        <div class="race__head">
+          <h3 class="h3">com a vertisell</h3>
+          <span class="tag">ia + crm</span>
+        </div>
+        <ol class="race__list">
+          <li class="race__item" data-at="0"><time class="mono">21:47</time><p>O lead pergunta o preço no WhatsApp.</p></li>
+          <li class="race__item is-good" data-at="1"><time class="mono">21:47:08</time><p>A IA responde em 8 segundos, no tom da sua empresa.</p></li>
+          <li class="race__item is-good" data-at="2"><time class="mono">21:49</time><p>Qualifica: entende o que o lead precisa e quanto quer investir.</p></li>
+          <li class="race__item is-good" data-at="3"><time class="mono">21:51</time><p>Agenda a reunião e cria o card no funil, já preenchido.</p></li>
+          <li class="race__item is-good" data-at="4"><time class="mono">amanhã 14:00</time><p>Lembrete no WhatsApp. Presença confirmada.</p></li>
+        </ol>
+        <div class="race__result race__result--good" data-at="5"><svg width="18" height="18"><use href="#i-check"/></svg> seu vendedor entra só para fechar</div>
+      </div>
+    </div>
+
+    <ul class="facts" data-facts>
+      <li class="fact">
+        <span class="fact__num mono">7x</span>
+        <p class="fact__text">mais chance de qualificar o lead com contato na primeira hora, comparado a uma hora depois.</p>
+        <a class="fact__src" href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads" target="_blank" rel="noopener">fonte: Harvard Business Review, 2011 (EUA)</a>
+      </li>
+      <li class="fact">
+        <span class="fact__num mono">42h</span>
+        <p class="fact__text">foi o tempo médio de resposta entre as empresas que chegaram a responder.</p>
+        <a class="fact__src" href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads" target="_blank" rel="noopener">fonte: Harvard Business Review, 2011 (EUA)</a>
+      </li>
+      <li class="fact">
+        <span class="fact__num mono">23%</span>
+        <p class="fact__text">das empresas auditadas nunca responderam o lead.</p>
+        <a class="fact__src" href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads" target="_blank" rel="noopener">fonte: Harvard Business Review, 2011 (EUA)</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================================================================ processo (órbita) -->
+<section class="section section--surface process" id="como-funciona" aria-labelledby="processo-titulo">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <h2 class="h2" id="processo-titulo">o processo inteiro,<br><span class="mono">no automático.</span></h2>
+      <p class="lead">Do primeiro "oi" ao card em "ganho", a Vertisell executa sozinha cada etapa que hoje depende de alguém lembrar.</p>
+    </div>
+
+    <div class="orbit" data-orbit>
+      <div class="orbit__ring" aria-hidden="true"></div>
+      <div class="orbit__ring orbit__ring--inner" aria-hidden="true"></div>
+      <div class="orbit__runner" aria-hidden="true"><span></span></div>
+      <div class="orbit__core">
+        <img src="assets/img/vertisell-shield.webp" width="44" height="43" alt="">
+        <strong>agente de ia</strong>
+        <span class="mono">roda 24/7<span class="caret"></span></span>
+      </div>
+      <ol class="orbit__nodes">
+        <li class="orbit__node" style="--i:0"><span class="orbit__num mono">01</span><strong>atende</strong><span>responde em segundos, de dia e de madrugada</span></li>
+        <li class="orbit__node" style="--i:1"><span class="orbit__num mono">02</span><strong>qualifica</strong><span>faz as perguntas certas e separa curioso de comprador</span></li>
+        <li class="orbit__node" style="--i:2"><span class="orbit__num mono">03</span><strong>vende</strong><span>apresenta a oferta, tira dúvidas e conduz para o próximo passo</span></li>
+        <li class="orbit__node" style="--i:3"><span class="orbit__num mono">04</span><strong>preenche o crm</strong><span>nome, origem, interesse e orçamento salvos no contato</span></li>
+        <li class="orbit__node" style="--i:4"><span class="orbit__num mono">05</span><strong>agenda a reunião</strong><span>consulta a agenda e marca no horário livre</span></li>
+        <li class="orbit__node" style="--i:5"><span class="orbit__num mono">06</span><strong>envia lembretes</strong><span>confirmação e aviso antes da reunião, no WhatsApp</span></li>
+        <li class="orbit__node" style="--i:6"><span class="orbit__num mono">07</span><strong>move o card</strong><span>cada avanço atualiza o funil sozinho</span></li>
+        <li class="orbit__node" style="--i:7"><span class="orbit__num mono">08</span><strong>faz follow-up</strong><span>retoma quem sumiu, no tempo certo</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ demo do crm -->
+<section class="section demo-sec" id="demo" aria-labelledby="demo-titulo">
+  <div class="container">
+    <div class="section-head demo-sec__head">
+      <h2 class="h2" id="demo-titulo">veja a vertisell<br><span class="mono">trabalhando.</span></h2>
+      <p class="lead">Uma simulação feita com a interface real do sistema. Deixe rodar ou clique nas abas para ver cada parte.</p>
+    </div>
+    <div id="crm-demo" class="vd" aria-label="Demonstração interativa do CRM Vertisell"></div>
+  </div>
+</section>
+
+<!-- ================================================================ ligações -->
+<section class="section section--surface feature" id="ligacoes" aria-labelledby="ligacoes-titulo">
+  <div class="container split">
+    <div class="feature__copy">
+      <span class="tag tag--green"><svg width="12" height="12"><use href="#i-whatsapp"/></svg> novo</span>
+      <h2 class="h2" id="ligacoes-titulo">ligue pelo whatsapp.<br><span class="mono">a gravação fica na conversa.</span></h2>
+      <p class="lead">Quando o lead prefere falar, seu vendedor liga pelo WhatsApp sem sair do CRM. A chamada fica gravada no histórico do contato, junto com as mensagens.</p>
+      <ul class="checks">
+        <li><svg><use href="#i-check"/></svg>Ligação de WhatsApp dentro da plataforma, sem trocar de tela</li>
+        <li><svg><use href="#i-check"/></svg>Cada chamada gravada e salva na conversa do contato</li>
+        <li><svg><use href="#i-check"/></svg>Ouça de novo antes da proposta e use no treinamento do time</li>
+        <li><svg><use href="#i-check"/></svg>Relatório de ligações por vendedor</li>
+      </ul>
+    </div>
+
+    <div class="feature__visual" aria-hidden="true">
+      <div class="callmock" data-callmock>
+        <div class="callmock__head">
+          <span class="avatar" style="--c:#0891b2">HD</span>
+          <span class="callmock__who"><strong>Henrique Dias</strong><small>via WhatsApp · lead quente</small></span>
+          <span class="callmock__btn" data-call-btn><svg width="14" height="14"><use href="#i-phone"/></svg> ligar pelo WhatsApp</span>
+        </div>
+        <div class="callmock__thread">
+          <div class="msg msg--in">Consegue me ligar agora? Prefiro explicar falando.</div>
+          <div class="msg msg--out">Claro, Henrique! Te ligo em 1 minuto. <span class="msg__ticks"><svg><use href="#i-checks"/></svg></span></div>
+
+          <div class="calling" data-calling>
+            <span class="avatar avatar--lg" style="--c:#0891b2">HD</span>
+            <div><strong>Henrique Dias</strong><span class="mono" data-call-timer>chamando…</span></div>
+            <span class="calling__end"><svg width="16" height="16"><use href="#i-phone"/></svg></span>
+          </div>
+
+          <div class="callcard" data-callcard>
+            <div class="callcard__top">
+              <span class="callcard__icon"><svg width="16" height="16"><use href="#i-phone"/></svg></span>
+              <span><strong>Ligação de WhatsApp</strong><small>Carla Mendes → Henrique Dias · hoje, 10:24</small></span>
+              <span class="tag tag--green"><svg width="10" height="10"><use href="#i-mic"/></svg> gravada</span>
+            </div>
+            <div class="player">
+              <span class="player__play" data-player-btn><svg width="14" height="14"><use href="#i-play"/></svg></span>
+              <span class="player__wave" data-wave></span>
+              <span class="player__time mono" data-player-time>00:00 / 06:42</span>
+              <span class="player__speed mono">1x</span>
+              <svg class="player__dl" width="16" height="16"><use href="#i-download"/></svg>
+            </div>
+          </div>
+          <div class="sys" data-call-saved><svg width="13" height="13"><use href="#i-check"/></svg> gravação salva no histórico do contato</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ follow-up -->
+<section class="section feature feature--reverse" id="follow-up" aria-labelledby="followup-titulo">
+  <div class="container split">
+    <div class="feature__visual" aria-hidden="true">
+      <div class="fumock" data-fumock>
+        <div class="fumock__head">
+          <span class="avatar" style="--c:#db2777">PG</span>
+          <span><strong>Patrícia Gomes</strong><small>orçamento · Instagram</small></span>
+          <span class="tag tag--purple"><svg width="11" height="11"><use href="#i-sparkle"/></svg> follow-up ativo</span>
+        </div>
+        <div class="fumock__thread">
+          <div class="day mono">segunda</div>
+          <div class="msg msg--in" data-fu="0">Oi! Queria um orçamento para o evento de 15 anos da minha filha.</div>
+          <div class="msg msg--out msg--ai" data-fu="1"><span class="msg__ai">IA</span>Que lindo, Patrícia! Para quantos convidados e em qual mês? Assim já te mando as opções.</div>
+          <div class="silence mono" data-fu="2">sem resposta</div>
+          <div class="day mono" data-fu="3">terça · follow-up 1</div>
+          <div class="msg msg--out msg--ai" data-fu="4"><span class="msg__ai">IA</span>Oi, Patrícia! Separei 3 pacotes para 15 anos. Quer que eu te mande os valores?</div>
+          <div class="day mono" data-fu="5">quinta · follow-up 2</div>
+          <div class="msg msg--out msg--ai" data-fu="6"><span class="msg__ai">IA</span>Ainda temos 2 datas livres em março. Posso segurar uma para você até sexta?</div>
+          <div class="msg msg--in" data-fu="7">Pode sim! Uns 120 convidados, dia 14 de março 😍</div>
+          <div class="sys" data-fu="8"><svg width="13" height="13"><use href="#i-calendar"/></svg> reunião agendada · card movido para qualificado</div>
+        </div>
+      </div>
+    </div>
+    <div class="feature__copy">
+      <h2 class="h2" id="followup-titulo">o follow-up que<br><span class="mono">ninguém esquece.</span></h2>
+      <p class="lead">Quando o lead para de responder, a Vertisell retoma a conversa no tempo certo, com uma mensagem que faz sentido para aquele contato, até ele responder ou sair do funil.</p>
+      <ul class="checks">
+        <li><svg><use href="#i-check"/></svg>Sequências por WhatsApp, e-mail e SMS</li>
+        <li><svg><use href="#i-check"/></svg>Para sozinha quando o lead responde</li>
+        <li><svg><use href="#i-check"/></svg>Recupera orçamento parado e reunião que não aconteceu</li>
+      </ul>
+      <p class="feature__fact" data-fill="fu-fact"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ omnichannel -->
+<section class="section section--surface omni" id="omnichannel" aria-labelledby="omni-titulo">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="h2" id="omni-titulo">todos os canais,<br><span class="mono">uma caixa de entrada.</span></h2>
+      <p class="lead">WhatsApp, Instagram, Facebook, e-mail, SMS e o chat do seu site chegam no mesmo lugar, com o histórico do cliente junto. Nada se perde entre abas e celulares.</p>
+    </div>
+    <div class="omni__stage" data-omni>
+      <ul class="omni__channels">
+        <li style="--c:#25d366"><svg><use href="#i-whatsapp"/></svg>WhatsApp</li>
+        <li style="--c:#e1306c"><svg><use href="#i-instagram"/></svg>Instagram</li>
+        <li style="--c:#0a7cff"><svg><use href="#i-messenger"/></svg>Messenger</li>
+        <li style="--c:#7047eb"><svg><use href="#i-mail"/></svg>E-mail</li>
+        <li style="--c:#e89a0c"><svg><use href="#i-sms"/></svg>SMS</li>
+        <li style="--c:#0763d1"><svg><use href="#i-globe"/></svg>Chat do site</li>
+      </ul>
+      <div class="omni__wirebox" aria-hidden="true"><svg class="omni__wires" preserveAspectRatio="none" data-omni-wires></svg></div>
+      <div class="omni__inbox">
+        <div class="omni__inbox-head">
+          <svg width="16" height="16"><use href="#i-inbox"/></svg>
+          <strong>caixa de entrada</strong>
+          <span class="tag" data-omni-count>6 novas</span>
+        </div>
+        <ul class="omni__list" data-omni-list></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ app -->
+<section class="section app-sec" id="app" aria-labelledby="app-titulo">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="h2" id="app-titulo">o crm inteiro<br><span class="mono">no seu bolso.</span></h2>
+      <p class="lead">App com a sua marca, já no plano Start. Responda leads, ligue, veja a agenda e acompanhe as vendas de onde estiver, enquanto a IA segura o atendimento.</p>
+    </div>
+    <div class="scenes" data-scenes>
+      <figure class="scene" data-scene="0">
+        <div class="phone phone--sm" aria-hidden="true">
+          <div class="phone__frame"><div class="phone__island"></div>
+            <div class="phone__screen"><div class="mini" data-mini="inbox"></div></div>
+          </div>
+        </div>
+        <figcaption><span class="mono">07:40</span> no trânsito<small>A IA atendeu 6 leads enquanto você dirigia.</small></figcaption>
+      </figure>
+      <figure class="scene" data-scene="1">
+        <div class="phone phone--sm" aria-hidden="true">
+          <div class="phone__frame"><div class="phone__island"></div>
+            <div class="phone__screen"><div class="mini" data-mini="agenda"></div></div>
+          </div>
+        </div>
+        <figcaption><span class="mono">13:15</span> entre uma reunião e outra<small>Três consultas novas na agenda, com lembrete marcado.</small></figcaption>
+      </figure>
+      <figure class="scene" data-scene="2">
+        <div class="phone phone--sm" aria-hidden="true">
+          <div class="phone__frame"><div class="phone__island"></div>
+            <div class="phone__screen"><div class="mini" data-mini="sales"></div></div>
+          </div>
+        </div>
+        <figcaption><span class="mono">19:30</span> loja fechada<small>Contrato assinado e venda ganha no funil.</small></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ tudo em um -->
+<section class="section section--surface allin" id="tudo-em-um" aria-labelledby="allin-titulo">
+  <div class="container">
+    <div class="allin__top">
+      <div class="section-head">
+        <h2 class="h2" id="allin-titulo">dez ferramentas soltas<br><span class="mono">viram uma plataforma.</span></h2>
+        <p class="lead">CRM, WhatsApp, agenda, e-mail marketing, sites, formulários, contratos, cobrança e cursos costumam ter cada um seu login, seu boleto e seus dados. Na Vertisell, tudo fica no mesmo lugar e conversa entre si.</p>
+      </div>
+      <div class="allin__switch" role="group" aria-label="Comparar">
+        <button type="button" class="allin__opt" aria-pressed="false" data-allin-set="before">hoje</button>
+        <button type="button" class="allin__opt" aria-pressed="true" data-allin-set="after">com a vertisell</button>
+      </div>
+    </div>
+
+    <div class="allin__stage" data-allin>
+      <div class="allin__frame" aria-hidden="true">
+        <div class="allin__frame-bar">
+          <img src="assets/img/vertisell-shield-white.webp" width="18" height="18" alt="">
+          <span>vertisell</span>
+          <span class="allin__frame-meta mono">1 login · 1 fatura · 1 suporte</span>
+        </div>
+      </div>
+      <ul class="allin__tools">
+        <li style="--x:4%;--y:8%;--r:-6deg"><svg><use href="#i-kanban"/></svg>CRM e funil</li>
+        <li style="--x:30%;--y:2%;--r:4deg"><svg><use href="#i-whatsapp"/></svg>WhatsApp</li>
+        <li style="--x:58%;--y:10%;--r:-3deg"><svg><use href="#i-calendar"/></svg>agenda online</li>
+        <li style="--x:80%;--y:4%;--r:7deg"><svg><use href="#i-bot"/></svg>agentes de IA</li>
+        <li style="--x:12%;--y:34%;--r:5deg"><svg><use href="#i-mail"/></svg>e-mail marketing</li>
+        <li style="--x:42%;--y:30%;--r:-8deg"><svg><use href="#i-sms"/></svg>SMS</li>
+        <li style="--x:66%;--y:38%;--r:3deg"><svg><use href="#i-layout"/></svg>sites e landing pages</li>
+        <li style="--x:2%;--y:62%;--r:-4deg"><svg><use href="#i-form"/></svg>formulários</li>
+        <li style="--x:26%;--y:58%;--r:6deg"><svg><use href="#i-sign"/></svg>assinatura de contratos</li>
+        <li style="--x:54%;--y:64%;--r:-5deg"><svg><use href="#i-card"/></svg>cobrança recorrente</li>
+        <li style="--x:78%;--y:60%;--r:4deg"><svg><use href="#i-share"/></svg>redes sociais</li>
+        <li style="--x:8%;--y:86%;--r:3deg"><svg><use href="#i-star-line"/></svg>reputação</li>
+        <li style="--x:32%;--y:84%;--r:-6deg"><svg><use href="#i-chat"/></svg>chat do site</li>
+        <li style="--x:56%;--y:88%;--r:5deg"><svg><use href="#i-cap"/></svg>cursos e membros</li>
+        <li style="--x:80%;--y:84%;--r:-3deg"><svg><use href="#i-chart"/></svg>relatórios</li>
+        <li style="--x:68%;--y:22%;--r:-7deg"><svg><use href="#i-phone-app"/></svg>app com sua marca</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ dados -->
+<section class="section data" id="dados" aria-labelledby="dados-titulo">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="h2" id="dados-titulo">o que as pesquisas<br><span class="mono">já mostraram.</span></h2>
+      <p class="lead">Pesquisas sobre velocidade de resposta, follow-up, lembretes e IA em vendas, cada número com a fonte para você conferir.</p>
+    </div>
+    <ul class="stats" data-stats></ul>
+  </div>
+</section>
+
+<!-- ================================================================ roi -->
+<section class="section section--surface roi-sec" id="roi" aria-labelledby="roi-titulo">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="h2" id="roi-titulo">quanto a demora<br><span class="mono">custa por mês?</span></h2>
+      <p class="lead">Coloque os números da sua operação. A calculadora estima o que fica na mesa hoje e o retorno da Vertisell, com premissas conservadoras e fontes abertas.</p>
+    </div>
+    <div class="roi" id="roi-app" data-roi></div>
+  </div>
+</section>
+
+<!-- ================================================================ avaliações -->
+<section class="section reviews" id="avaliacoes" aria-labelledby="avaliacoes-titulo">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="h2" id="avaliacoes-titulo">quem usa,<br><span class="mono">indica.</span></h2>
+    </div>
+    <ul class="reviews__list">
+      <li class="review">
+        <div class="review__top">
+          <span class="stars" aria-label="5 estrelas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+          <span class="review__src">avaliação no Google</span>
+        </div>
+        <blockquote>“Sou cliente e indico! Muito booom! O CRM Vertisell ajuda meu comercial a organizar todos os leads, além da IA que faz o primeiro atendimento e agenda.”</blockquote>
+        <p class="review__who"><span class="avatar" style="--c:#0763d1">RV</span><span><strong>Dra. Roberta Veloso</strong><small>Advogada, cliente CRM Vertisell</small></span></p>
+      </li>
+      <li class="review">
+        <div class="review__top">
+          <span class="stars" aria-label="5 estrelas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+          <span class="review__src">avaliação no Google</span>
+        </div>
+        <blockquote>“Sistema muito bom, bem explicativo, fácil de entendimento e muito muito funcional. Super recomendo.”</blockquote>
+        <p class="review__who"><span class="avatar" style="--c:#15a34a">MP</span><span><strong>Marcio Permilton</strong><small>Imobiliária Kairos</small></span></p>
+      </li>
+      <li class="review">
+        <div class="review__top">
+          <span class="stars" aria-label="5 estrelas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+          <span class="review__src">avaliação no Google</span>
+        </div>
+        <blockquote>“Serviço excelente, Otimo atendimento! Zero reclamações!”</blockquote>
+        <p class="review__who"><span class="avatar" style="--c:#7047eb">NS</span><span><strong>Nubia Valote Severo</strong><small>Grupo Magical Eventos</small></span></p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================================================================ planos -->
+<section class="section section--surface pricing" id="planos" aria-labelledby="planos-titulo">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <h2 class="h2" id="planos-titulo">escolha o plano<br><span class="mono">e comece a vender mais.</span></h2>
+      <p class="lead">Todos os planos com 37% de desconto. Sem instalação, sem servidor, com onboarding guiado.</p>
+    </div>
+
+    <ul class="plans">
+      <li class="plan">
+        <div class="plan__head">
+          <h3 class="plan__name">Verti Start</h3>
+          <p class="plan__tagline">Estrutura e automação sem complexidade.</p>
+        </div>
+        <div class="plan__price">
+          <p class="plan__from"><s>de R$ 312,70</s><span class="tag tag--green">-37%</span></p>
+          <p class="plan__now"><span class="plan__currency">R$</span><span class="plan__value">197</span><span class="plan__per">/mês</span></p>
+          <p class="plan__users"><svg width="15" height="15"><use href="#i-users"/></svg> 5 usuários incluídos</p>
+        </div>
+        <a class="btn btn--ghost plan__cta" href="#contato" data-wa="Olá! Quero contratar o plano Verti Start (R$ 197/mês).">começar com o start</a>
+        <ul class="plan__list">
+          <li>CRM completo e relatórios</li>
+          <li>Calendário de agendamentos</li>
+          <li>WhatsApp, e-mail e SMS integrados</li>
+          <li>1 conexão de WhatsApp</li>
+          <li>Automações essenciais e formulários</li>
+          <li>App móvel com a sua marca</li>
+          <li>Onboarding guiado</li>
+        </ul>
+      </li>
+
+      <li class="plan plan--featured">
+        <span class="plan__badge">mais popular</span>
+        <div class="plan__head">
+          <h3 class="plan__name">Verti Sales</h3>
+          <p class="plan__tagline">Automação avançada e vendas escaláveis.</p>
+        </div>
+        <div class="plan__price">
+          <p class="plan__from"><s>de R$ 630,16</s><span class="tag tag--green">-37%</span></p>
+          <p class="plan__now"><span class="plan__currency">R$</span><span class="plan__value">397</span><span class="plan__per">/mês</span></p>
+          <p class="plan__users"><svg width="15" height="15"><use href="#i-users"/></svg> Tudo do Start, com 10 usuários</p>
+        </div>
+        <a class="btn btn--primary plan__cta" href="#contato" data-wa="Olá! Quero contratar o plano Verti Sales (R$ 397/mês).">começar com o sales</a>
+        <ul class="plan__list">
+          <li>Automações avançadas</li>
+          <li>Marketing por e-mail e WhatsApp</li>
+          <li>Planejador de redes sociais</li>
+          <li>Site institucional e blog</li>
+          <li>Gestão de reputação</li>
+          <li class="is-ai">Agentes de IA no atendimento</li>
+          <li>Assinatura eletrônica de contratos</li>
+        </ul>
+      </li>
+
+      <li class="plan">
+        <div class="plan__head">
+          <h3 class="plan__name">Verti Pro</h3>
+          <p class="plan__tagline">Operação completa, sem cursos e comunidades.</p>
+        </div>
+        <div class="plan__price">
+          <p class="plan__from"><s>de R$ 947,62</s><span class="tag tag--green">-37%</span></p>
+          <p class="plan__now"><span class="plan__currency">R$</span><span class="plan__value">597</span><span class="plan__per">/mês</span></p>
+          <p class="plan__users"><svg width="15" height="15"><use href="#i-users"/></svg> Tudo do Sales, com 50 usuários</p>
+        </div>
+        <a class="btn btn--ghost plan__cta" href="#contato" data-wa="Olá! Quero contratar o plano Verti Pro (R$ 597/mês).">começar com o pro</a>
+        <ul class="plan__list">
+          <li>Pagamentos e cobrança recorrente</li>
+          <li>E-commerce, carrinho abandonado e cupons</li>
+          <li class="is-ai">AI Studio: sites e landing pages com IA</li>
+          <li>Relatórios de marketing</li>
+          <li class="is-ai">Assistente de IA no CRM</li>
+          <li>Chat ao vivo no site</li>
+        </ul>
+      </li>
+
+      <li class="plan">
+        <div class="plan__head">
+          <h3 class="plan__name">Verti Enterprise</h3>
+          <p class="plan__tagline">Tudo incluso, com cursos e área de membros.</p>
+        </div>
+        <div class="plan__price">
+          <p class="plan__from"><s>de R$ 1.582,54</s><span class="tag tag--green">-37%</span></p>
+          <p class="plan__now"><span class="plan__currency">R$</span><span class="plan__value">997</span><span class="plan__per">/mês</span></p>
+          <p class="plan__users"><svg width="15" height="15"><use href="#i-users"/></svg> Tudo do Pro, usuários ilimitados</p>
+        </div>
+        <a class="btn btn--ghost plan__cta" href="#contato" data-wa="Olá! Quero contratar o plano Verti Enterprise (R$ 997/mês).">começar com o enterprise</a>
+        <ul class="plan__list">
+          <li>Cursos online e certificados</li>
+          <li>Comunidades</li>
+          <li>Portal do cliente personalizado</li>
+          <li>Quizzes e avaliações</li>
+          <li>Programa de afiliados</li>
+        </ul>
+      </li>
+    </ul>
+    <p class="pricing__note">Valores mensais. O desconto de 37% já está aplicado nos preços acima.</p>
+  </div>
+</section>
+
+<!-- ================================================================ faq -->
+<section class="section faq" id="faq" aria-labelledby="faq-titulo">
+  <div class="container faq__grid">
+    <div class="section-head">
+      <h2 class="h2" id="faq-titulo">perguntas<br><span class="mono">frequentes.</span></h2>
+      <p class="lead">Não achou sua dúvida? Fale com um especialista pelo WhatsApp.</p>
+    </div>
+    <div class="faq__list">
+      <details>
+        <summary>Em qual plano está a IA que atende no WhatsApp?<svg width="20" height="20"><use href="#i-chevron"/></svg></summary>
+        <p>Os agentes de IA no atendimento entram a partir do Verti Sales. O Verti Pro adiciona o assistente de IA dentro do CRM e o AI Studio, que cria sites e landing pages com IA.</p>
+      </details>
+      <details>
+        <summary>Dá para ligar pelo WhatsApp e gravar a chamada?<svg width="20" height="20"><use href="#i-chevron"/></svg></summary>
+        <p>Sim. A ligação é feita de dentro da plataforma e a gravação fica salva na conversa do contato, junto com as mensagens.</p>
+      </details>
+      <details>
+        <summary>Quantos usuários cada plano inclui?<svg width="20" height="20"><use href="#i-chevron"/></svg></summary>
+        <p>Start: 5 usuários. Sales: 10. Pro: 50. Enterprise: usuários ilimitados.</p>
+      </details>
+      <details>
+        <summary>Tem aplicativo de celular?<svg width="20" height="20"><use href="#i-chevron"/></svg></summary>
+        <p>Tem, e com a sua marca, desde o plano Start. Pelo app você responde conversas, vê a agenda e acompanha o funil.</p>
+      </details>
+      <details>
+        <summary>Quais canais entram na caixa de entrada?<svg width="20" height="20"><use href="#i-chevron"/></svg></summary>
+        <p>WhatsApp, e-mail e SMS vêm integrados desde o Start, e Instagram e Facebook chegam na mesma caixa de entrada. O chat ao vivo do site entra no Verti Pro.</p>
+      </details>
+      <details>
+        <summary>Como funciona o começo?<svg width="20" height="20"><use href="#i-chevron"/></svg></summary>
+        <p>Você conversa com um especialista, escolhe o plano e passa pelo onboarding guiado para deixar a conta pronta para a sua operação.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ contato -->
+<section class="section cta" id="contato" aria-labelledby="contato-titulo">
+  <div class="container cta__grid">
+    <div class="cta__copy">
+      <h2 class="h2" id="contato-titulo">quer ver a ia vendendo<br><span class="mono">no seu whatsapp?</span></h2>
+      <p class="lead">Em uma conversa rápida, mostramos a Vertisell com o funil e as perguntas da sua empresa.</p>
+      <ul class="cta__checks">
+        <li><svg><use href="#i-check"/></svg>atendimento 24/7 no WhatsApp</li>
+        <li><svg><use href="#i-check"/></svg>qualificação e agendamento automáticos</li>
+        <li><svg><use href="#i-check"/></svg>lembretes e follow-up sem esforço</li>
+        <li><svg><use href="#i-check"/></svg>crm preenchido e funil atualizado sozinho</li>
+        <li><svg><use href="#i-check"/></svg>ligações de WhatsApp gravadas na conversa</li>
+        <li><svg><use href="#i-check"/></svg>app com a sua marca</li>
+      </ul>
+      <p class="cta__foot mono">onboarding guiado<span class="caret"></span></p>
+    </div>
+
+    <form class="cta__form" data-lead-form novalidate>
+      <p class="label">demonstração gratuita</p>
+      <div class="field">
+        <label for="f-nome">nome</label>
+        <input id="f-nome" name="nome" type="text" autocomplete="name" placeholder="seu nome" required>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="f-whats">whatsapp</label>
+          <input id="f-whats" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="(11) 98765-4321" required>
+        </div>
+        <div class="field">
+          <label for="f-empresa">empresa</label>
+          <input id="f-empresa" name="empresa" type="text" autocomplete="organization" placeholder="nome da empresa">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="f-segmento">segmento</label>
+          <select id="f-segmento" name="segmento">
+            <option value="">selecionar</option>
+            <option>advocacia</option>
+            <option>imobiliária</option>
+            <option>saúde e estética</option>
+            <option>eventos</option>
+            <option>educação</option>
+            <option>serviços</option>
+            <option>varejo e e-commerce</option>
+            <option>outro</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-leads">leads por mês</label>
+          <select id="f-leads" name="leads">
+            <option value="">selecionar</option>
+            <option>até 100</option>
+            <option>100 a 500</option>
+            <option>500 a 2.000</option>
+            <option>mais de 2.000</option>
+          </select>
+        </div>
+      </div>
+      <p class="field__error" role="alert" data-form-error hidden></p>
+      <button class="btn btn--primary btn--lg cta__submit" type="submit">
+        <svg><use href="#i-whatsapp"/></svg>agendar demonstração
+      </button>
+      <p class="cta__privacy">Você será levado ao WhatsApp da nossa equipe com a mensagem pronta.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ================================================================ rodapé -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="brand" href="#topo">
+        <img src="assets/img/vertisell-shield.webp" width="30" height="29" alt="">
+        <span class="brand__name">vertisell</span>
+      </a>
+      <p>CRM com IA que atende, qualifica e vende pelo WhatsApp.</p>
+      <p class="footer__by">um produto <img src="assets/img/control-gestao-colorida.webp" width="118" height="27" alt="Control Gestão" loading="lazy"></p>
+    </div>
+    <nav class="footer__nav" aria-label="Rodapé">
+      <a href="#como-funciona">como funciona</a>
+      <a href="#demo">demonstração</a>
+      <a href="#roi">calculadora de roi</a>
+      <a href="#planos">planos</a>
+      <a href="#faq">perguntas frequentes</a>
+      <a href="#contato" data-wa="Olá! Quero falar com um especialista da Vertisell.">falar com especialista</a>
+    </nav>
+  </div>
+  <div class="container footer__bottom">
+    <p>© 2026 Vertisell. Todos os direitos reservados.</p>
+    <p>Selos G2 e Capterra concedidos à tecnologia que roda a plataforma. Estatísticas citadas com as respectivas fontes.</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="#contato" data-wa="Olá! Vim pelo site da Vertisell e quero saber mais." aria-label="Falar no WhatsApp">
+  <svg width="28" height="28"><use href="#i-whatsapp"/></svg>
+</a>
+
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/demo.js" defer></script>
+<script src="assets/js/roi.js" defer></script>
+</body>
+</html>

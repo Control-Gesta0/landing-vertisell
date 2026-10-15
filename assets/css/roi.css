@@ -1,0 +1,145 @@
+/* =========================================================================
+   Vertisell — calculadora de ROI
+   ========================================================================= */
+.roi {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: 0 40px 80px -50px rgba(11, 22, 40, .45), var(--shadow-1);
+  background: var(--surface);
+}
+
+/* entradas */
+.roi__inputs { display: grid; gap: 26px; padding: clamp(24px, 3.2vw, 40px); align-content: start; }
+.roi-field { display: grid; gap: 10px; }
+.roi-field__top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.roi-field label, .roi-label { font-weight: 600; font-size: .9375rem; letter-spacing: -.01em; color: var(--ink); }
+.roi-field output { font-size: 1rem; color: var(--blue); }
+
+.roi input[type="range"] {
+  --p: 50%;
+  -webkit-appearance: none; appearance: none;
+  width: 100%; height: 26px; margin: 0;
+  background: transparent; cursor: pointer;
+}
+.roi input[type="range"]:focus { outline: none; }
+.roi input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px; border-radius: 99px;
+  background: linear-gradient(to right, var(--blue) var(--p), var(--pill) var(--p));
+}
+.roi input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none;
+  width: 22px; height: 22px; margin-top: -8px;
+  border-radius: 50%;
+  background: #fff; border: 2px solid var(--blue);
+  box-shadow: 0 2px 8px rgba(11, 22, 40, .18);
+  transition: transform .15s var(--ease-out), box-shadow .15s;
+}
+.roi input[type="range"]:active::-webkit-slider-thumb { transform: scale(1.12); }
+.roi input[type="range"]:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 5px rgba(7, 99, 209, .2), 0 2px 8px rgba(11, 22, 40, .18); }
+.roi input[type="range"]::-moz-range-track { height: 6px; border-radius: 99px; background: var(--pill); }
+.roi input[type="range"]::-moz-range-progress { height: 6px; border-radius: 99px; background: var(--blue); }
+.roi input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius: 50%; background: #fff; border: 2px solid var(--blue); box-shadow: 0 2px 8px rgba(11, 22, 40, .18); }
+.roi input[type="range"]:focus-visible::-moz-range-thumb { box-shadow: 0 0 0 5px rgba(7, 99, 209, .2); }
+
+.roi-money {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 10px; border-radius: 10px;
+  border: 1px solid var(--line-2); background: var(--surface-2);
+  font-family: var(--font-mono); font-size: .9375rem; color: var(--muted);
+}
+.roi-money input {
+  width: 84px; border: 0; background: transparent; padding: 0;
+  font-family: var(--font-mono); font-size: 1rem; color: var(--blue); text-align: right;
+}
+.roi-money:focus-within { border-color: var(--blue); box-shadow: 0 0 0 4px rgba(7, 99, 209, .12); }
+.roi-money input:focus { outline: none; }
+
+.roi-seg {
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 4px;
+  padding: 4px; border-radius: 14px; background: var(--pill);
+}
+.roi-seg button {
+  min-height: 40px; padding: 6px 8px; border-radius: 10px;
+  font-size: .8125rem; font-weight: 600; color: var(--muted); line-height: 1.2;
+  transition: background-color .2s, color .2s, box-shadow .2s;
+}
+.roi-seg button:hover { color: var(--ink); }
+.roi-seg button[aria-checked="true"] { background: var(--surface); color: var(--ink); box-shadow: var(--shadow-1); }
+
+/* resultado */
+.roi__result {
+  position: relative;
+  display: grid; gap: 18px; align-content: start;
+  padding: clamp(24px, 3.2vw, 40px);
+  background:
+    radial-gradient(70% 60% at 100% 0%, rgba(7, 99, 209, .45), rgba(7, 99, 209, 0) 70%),
+    var(--navy);
+  color: #fff;
+}
+.roi__kicker { font-family: var(--font-mono); font-size: .8125rem; color: #8fbaff; }
+.roi__kicker::after { content: "_"; }
+.roi__big {
+  font-size: clamp(2.75rem, 2rem + 3vw, 4.25rem);
+  line-height: 1; letter-spacing: -.065em;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+.roi__sub { color: #b7c7e2; font-size: .9375rem; line-height: 1.55; max-width: 52ch; }
+.roi__warn {
+  padding: 10px 12px; border-radius: 12px;
+  background: rgba(232, 154, 12, .12); border: 1px solid rgba(232, 154, 12, .3);
+  color: #f7d58f; font-size: .8125rem; line-height: 1.5;
+}
+.roi__warn[hidden] { display: none; }
+.roi__kpis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.roi__kpis > div {
+  display: grid; gap: 4px; align-content: start;
+  padding: 14px; border-radius: 14px;
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .08);
+}
+.roi__kpi { font-size: 1.5rem; letter-spacing: -.05em; color: #fff; line-height: 1.1; }
+.roi__kpis span:last-child { font-size: .78rem; color: #9fb3d4; line-height: 1.35; }
+.roi__bars { display: grid; gap: 12px; padding-top: 6px; }
+.roi__bar { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 12px; align-items: center; }
+.roi__bar span { grid-column: 1 / -1; font-size: .8125rem; color: #9fb3d4; }
+.roi__bar i {
+  display: block; height: 12px; border-radius: 99px;
+  background: rgba(255, 255, 255, .28);
+  transition: width .6s var(--ease-out);
+}
+.roi__bar--gain i { background: linear-gradient(90deg, #3b8bff, #25d366); }
+.roi__bar b { font-weight: 400; font-size: .9375rem; color: #fff; }
+.roi__plan {
+  display: flex; align-items: center; gap: 10px 14px; flex-wrap: wrap;
+  padding: 14px 16px; border-radius: 14px;
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .08);
+}
+.roi__plan span { font-family: var(--font-mono); font-size: .75rem; color: #9fb3d4; width: 100%; }
+.roi__plan strong { font-size: 1rem; letter-spacing: -.01em; }
+.roi__plan .btn { margin-left: auto; }
+.roi__how summary {
+  cursor: pointer; list-style: none;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: .875rem; font-weight: 600; color: #cfe0ff;
+}
+.roi__how summary::-webkit-details-marker { display: none; }
+.roi__how summary::after { content: "+"; font-family: var(--font-mono); color: #8fbaff; }
+.roi__how[open] summary::after { content: "−"; }
+.roi__how ol { margin-top: 12px; padding-left: 18px; list-style: decimal; display: grid; gap: 8px; font-size: .8125rem; line-height: 1.55; color: #b7c7e2; }
+.roi__how b { color: #fff; font-weight: 600; }
+.roi__src, .roi__disclaimer { margin-top: 12px; font-size: .75rem; line-height: 1.5; color: #8ea3c6; }
+.roi__src a { color: #cfe0ff; text-decoration: underline; text-underline-offset: 2px; }
+
+@media (max-width: 900px) {
+  .roi { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 480px) {
+  .roi__kpis { grid-template-columns: minmax(0, 1fr); }
+  .roi__kpis > div { grid-template-columns: auto 1fr; align-items: baseline; gap: 10px; }
+  .roi-seg { grid-auto-flow: row; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

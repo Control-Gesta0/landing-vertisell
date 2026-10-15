@@ -1,0 +1,7 @@
+# artefatos de desenvolvimento (screenshots, build da prévia)
+dev/shots/
+dev/artifact/
+dev/DEMO-CONTRACT.md
+node_modules/
+.DS_Store
+Thumbs.db

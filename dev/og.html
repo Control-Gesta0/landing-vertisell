@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>OG Vertisell</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/sections.css">
+<style>
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body { position: relative; }
+  .og { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 420px; align-items: center; padding: 0 64px; }
+  .og__brand { display: flex; align-items: center; gap: 12px; margin-bottom: 44px; }
+  .og__brand img { width: 44px; height: auto; }
+  .og__brand span { font-weight: 700; font-size: 30px; letter-spacing: -.035em; }
+  .og h1 { font-size: 66px; letter-spacing: -.04em; line-height: 1.02; }
+  .og h1 .strike { position: relative; color: var(--faint); display: inline-block; }
+  .og h1 .strike::after { content: ""; position: absolute; left: -2px; right: -2px; top: 54%; height: 5px; border-radius: 2px; background: var(--red); }
+  .og h1 .mono { display: block; margin-top: 4px; color: var(--ink); }
+  .og h1 .caret { color: var(--blue); animation: none; }
+  .og p { margin-top: 30px; font-size: 25px; line-height: 1.4; color: var(--muted); max-width: 30ch; }
+  .og__visual { position: relative; height: 630px; }
+  .og__visual .phone { position: absolute; top: 70px; left: 70px; width: 300px; transform: rotate(4deg); }
+  .og__visual .toast { position: absolute; z-index: 3; }
+  .t1 { left: -30px; top: 150px; }
+  .t2 { left: 10px; top: 420px; }
+  .app__thread { justify-content: flex-start; }
+</style>
+</head>
+<body class="dots">
+  <div class="og">
+    <div>
+      <div class="og__brand"><img src="../assets/img/vertisell-shield.webp" alt=""><span>vertisell</span></div>
+      <h1><span class="strike">lead sem resposta?</span><span class="mono">a ia responde em 8s.<span class="caret"></span></span></h1>
+      <p>IA + CRM no WhatsApp: atende, qualifica, agenda e move o card no funil.</p>
+    </div>
+    <div class="og__visual">
+      <div class="phone">
+        <div class="phone__frame"><div class="phone__island"></div>
+          <div class="phone__screen">
+            <div class="app">
+              <div class="app__status"><span class="mono">22:14</span><span class="app__status-icons"><i></i><i></i><i></i></span></div>
+              <div class="app__bar">
+                <span class="avatar" style="--c:#7c3aed">MT</span>
+                <span class="app__who"><strong>Marina Teles</strong><small>via WhatsApp</small></span>
+              </div>
+              <div class="app__thread">
+                <div class="day mono">hoje</div>
+                <div class="msg msg--in">Boa noite! Quanto custa o clareamento?</div>
+                <div class="msg msg--out msg--ai"><span class="msg__ai">IA</span>Oi, Marina! 😊 A avaliação é gratuita. Prefere a laser ou caseiro?</div>
+                <div class="msg msg--in">A laser</div>
+                <div class="msg msg--out msg--ai"><span class="msg__ai">IA</span>Tenho amanhã às 9h ou às 18h. Qual fica melhor?</div>
+                <div class="msg msg--in">18h 🙏</div>
+                <div class="sys">✓ Avaliação agendada · amanhã, 18:00</div>
+              </div>
+              <div class="app__composer"><span class="app__ai-toggle">agente de IA ativo</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="toast t1"><span class="toast__icon"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><span><span class="toast__title">respondido em 8 segundos</span><span class="toast__meta">agente de ia · agora</span></span></div>
+      <div class="toast t2"><span class="toast__icon toast__icon--green"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><span><span class="toast__title">reunião agendada</span><span class="toast__meta">amanhã, 18:00 · agora</span></span></div>
+    </div>
+  </div>
+</body>
+</html>
