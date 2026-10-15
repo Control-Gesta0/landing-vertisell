@@ -1,0 +1,4 @@
+# publica só o site (index.html + assets); ferramentas e páginas de teste ficam fora
+dev
+tools
+README.md
